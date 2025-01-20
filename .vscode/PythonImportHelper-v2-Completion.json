@@ -26,6 +26,15 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "configure",
         "kind": 2,
         "importPath": "main",
@@ -39,7 +48,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius\n# Extract weather data\ntemp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']",
+        "peekOfCode": "def kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data\nweather_data = {\n    \"temperature\": kelvin_to_celsius(response['main']['temp']),\n    \"wind\": response.get(\"wind\", {}).get(\"speed\", \"\"),\n    \"humidity\": response['main']['humidity'],\n    \"city\": CITY\n}\n# Save to a JSON file",
         "detail": "main",
         "documentation": {}
     },
@@ -48,7 +57,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "BASE_URL = \"https://api.openweathermap.org/data/2.5/weather\"\nAPI_KEY = os.getenv('API_KEY')\nCITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius",
+        "peekOfCode": "BASE_URL = \"https://api.openweathermap.org/data/2.5/weather\"\nAPI_KEY = os.getenv('API_KEY')\nCITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data",
         "detail": "main",
         "documentation": {}
     },
@@ -57,7 +66,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "API_KEY = os.getenv('API_KEY')\nCITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius\n# Extract weather data",
+        "peekOfCode": "API_KEY = os.getenv('API_KEY')\nCITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data\nweather_data = {",
         "detail": "main",
         "documentation": {}
     },
@@ -66,7 +75,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "CITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius\n# Extract weather data\ntemp_kelvin = response['main']['temp']",
+        "peekOfCode": "CITY = \"New Delhi\"\nif not API_KEY:\n    raise ValueError(\"API_KEY is missing. Check .env file.\")\nurl = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data\nweather_data = {\n    \"temperature\": kelvin_to_celsius(response['main']['temp']),",
         "detail": "main",
         "documentation": {}
     },
@@ -75,7 +84,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "url = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius\n# Extract weather data\ntemp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)",
+        "peekOfCode": "url = f\"{BASE_URL}?appid={API_KEY}&q={CITY}\"\nresponse = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data\nweather_data = {\n    \"temperature\": kelvin_to_celsius(response['main']['temp']),\n    \"wind\": response.get(\"wind\", {}).get(\"speed\", \"\"),\n    \"humidity\": response['main']['humidity'],\n    \"city\": CITY",
         "detail": "main",
         "documentation": {}
     },
@@ -84,61 +93,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "response = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    celsius = kelvin - 273.15\n    return celsius\n# Extract weather data\ntemp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']",
+        "peekOfCode": "response = requests.get(url).json()\ndef kelvin_to_celsius(kelvin):\n    return kelvin - 273.15\n# Extract weather data\nweather_data = {\n    \"temperature\": kelvin_to_celsius(response['main']['temp']),\n    \"wind\": response.get(\"wind\", {}).get(\"speed\", \"\"),\n    \"humidity\": response['main']['humidity'],\n    \"city\": CITY\n}",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "temp_kelvin",
+        "label": "weather_data",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "temp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "temp_celsius",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "temp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "feels_like_kelvin",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "feels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "feels_like_celsius",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "feels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "humidity",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "humidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "description",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "description = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "weather_data = {\n    \"temperature\": kelvin_to_celsius(response['main']['temp']),\n    \"wind\": response.get(\"wind\", {}).get(\"speed\", \"\"),\n    \"humidity\": response['main']['humidity'],\n    \"city\": CITY\n}\n# Save to a JSON file\nwith open(\"weather_data.json\", \"w\") as json_file:\n    json.dump(weather_data, json_file, indent=4)",
         "detail": "main",
         "documentation": {}
     }
