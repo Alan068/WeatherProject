@@ -93,7 +93,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "temp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")",
+        "peekOfCode": "temp_kelvin = response['main']['temp']\ntemp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -102,7 +102,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "temp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "temp_celsius = kelvin_to_celsius(temp_kelvin)\nfeels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -111,7 +111,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "feels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "feels_like_kelvin = response['main']['feels_like']\nfeels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -120,7 +120,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "feels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "feels_like_celsius = kelvin_to_celsius(feels_like_kelvin)\nhumidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -129,7 +129,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "humidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "humidity = response['main']['humidity']\ndescription = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -138,7 +138,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "description = response['weather'][0]['description']\n# Print results\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
+        "peekOfCode": "description = response['weather'][0]['description']\nprint(f\"Temperature in {CITY}: {temp_celsius:.2f}°C\")\nprint(f\"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C\")\nprint(f\"Humidity in {CITY}: {humidity}%\")\nprint(f\"Weather description: {description}\")",
         "detail": "main",
         "documentation": {}
     }

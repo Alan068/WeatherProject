@@ -35,7 +35,7 @@ feels_like_celsius = kelvin_to_celsius(feels_like_kelvin)
 humidity = response['main']['humidity']
 description = response['weather'][0]['description']
 
-# Print results
+
 print(f"Temperature in {CITY}: {temp_celsius:.2f}°C")
 print(f"Temperature in {CITY} feels like: {feels_like_celsius:.2f}°C")
 print(f"Humidity in {CITY}: {humidity}%")
